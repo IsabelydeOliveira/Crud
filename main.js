@@ -12,7 +12,7 @@ const closeModal = () => {
 const getLocalStorage = () => JSON.parse(localStorage.getItem('db_client')) ?? []
 const setLocalStorage = (dbClient) => localStorage.setItem("db_client", JSON.stringify(dbClient))
 
-// CRUD - create read update delete
+// CRUD - create read update delete //
 const deleteClient = (index) => {
   const dbClient = readClient()
   dbClient.splice(index, 1)
@@ -37,7 +37,7 @@ const isValidFields = () => {
   return document.getElementById('form').reportValidity()
 }
 
-//Interação com o layout
+//Interação com o layout //
 
 const clearFields = () => {
   const fields = document.querySelectorAll('.modal-field')
@@ -129,7 +129,7 @@ const editDelete = (event) => {
 
 updateTable()
 
-// Eventos
+// Eventos //
 document.getElementById('cadastrarCliente')
   .addEventListener('click', openModal)
 
